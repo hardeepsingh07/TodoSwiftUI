@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TodoView: View {
+    @EnvironmentObject var repo: TodoRepository
     @StateObject var viewModel: TodoViewModel
     
     var body: some View {

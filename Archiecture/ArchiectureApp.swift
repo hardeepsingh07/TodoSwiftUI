@@ -15,7 +15,7 @@ struct ArchiectureApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TodoView(viewModel: TodoViewModel(repo: repo))
+            MainContentView().environmentObject(repo)
         }
     }
 }
