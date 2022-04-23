@@ -1,17 +1,21 @@
-//
-//  ArchiectureApp.swift
-//  Archiecture
-//
-//  Created by Hardeep Singh on 4/21/22.
-//
 
 import SwiftUI
 
+/**
+ Simple Application
+   - List Item - Collapse and Expand
+   - On Expand log Analytics
+   - In Expand - Button start counter using Data Layer
+   - On Collapse - Stop counter
+ */
+
 @main
 struct ArchiectureApp: App {
+    private var repo: TodoRepository = TodoRepository(service: TodoSerivce())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoView(viewModel: TodoViewModel(repo: repo))
         }
     }
 }
